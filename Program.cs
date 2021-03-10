@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +41,8 @@ namespace Rest
 
 
 
+            for(int i = 0; i < 40; i++)
+            {
                 //Wysłanie oferty sprzedaży akcji
                 var postRequest = new RestRequest("/api/buyoffer", Method.POST);
                 string cena = sharePrices[1].price;
@@ -77,7 +79,7 @@ namespace Rest
                     price = dCenaSprzedazy
                 });
                 IRestResponse sellResponse = client.Execute(sellRequest);
-            
+            }
 
             
         }
